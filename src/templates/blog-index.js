@@ -7,6 +7,10 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 
+import TextSampler from '../components/TextSampler'
+
+import './../styles/styles.scss'
+
 class BlogIndex extends React.Component {
   render() {
     const config = get(this, 'props.data.config')
@@ -37,6 +41,7 @@ class BlogIndex extends React.Component {
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
+                <TextSampler />
               </h3>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
