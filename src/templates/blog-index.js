@@ -41,7 +41,7 @@ class BlogIndex extends React.Component {
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
-                <TextSampler />
+                <TextSampler sampleText={title} />
               </h3>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
